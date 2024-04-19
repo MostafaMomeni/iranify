@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 10px;
+    margin:15px 0;
     color: var(--text-color);
     padding: 0 10px;
 }
@@ -17,4 +17,7 @@
     font-size: 18px;
     color: var(--primary-color);
     margin-right: 5px;
+}
+@media(max-width: 400px){
+    
 }

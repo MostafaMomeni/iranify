@@ -20,8 +20,20 @@ export default function Home() {
       </div>
 
       {/* آهنگ های جدید */}
-      <div className='mt-3'>
+      <div className='mt-4'>
         <SectionHeader title="آهنگ های جدید" link="/new-music" textLink="مشاهده همه"/>
+        <div className={style.new_music_parent}>
+          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
+          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
+          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
+          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
+          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
+        </div>
+      </div>
+
+      {/* آهنگ های پر طرفدار */}
+      <div className='mt-5'>
+        <SectionHeader title="آهنگ های پرطرفدار" link="/new-music" textLink="مشاهده همه"/>
         <div className={style.new_music_parent}>
           <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
           <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
