@@ -1,0 +1,18 @@
+.parent{
+    width: 200px;
+}
+@media(max-width:1000px){
+    .parent{
+        width: 150px;
+    }
+}
+@media(max-width:850px){
+    .parent{
+        width: 100px;
+    }
+}
+@media(max-width:600px){
+    .parent{
+        width: 50px;
+    }
+}

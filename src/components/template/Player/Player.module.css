@@ -1,0 +1,124 @@
+.parent {
+  background-color: var(--black);
+  width: 100%;
+  padding: 0 5px;
+  margin: auto;
+}
+.player_parent {
+  margin: auto;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right {
+  display: flex;
+}
+.name_music_parent {
+  margin-right: 10px;
+  line-height: 0.8;
+}
+.name_music_parent > span {
+  color: var(--select-color);
+  font-size: 14px;
+}
+.name_music_parent > p {
+  font-size: 16px;
+}
+.like_icon {
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+.liked {
+  color: red;
+}
+.like_icon:hover {
+  transform: scale(1.1);
+}
+.volume_icon {
+  margin-right: 15px;
+  margin-bottom: 3px;
+}
+.full_icon {
+  font-size: 18px;
+  transition: 0.3s;
+}
+.full_icon_parent {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 3px;
+  border-radius: 50%;
+}
+.full_icon_parent:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.1);
+}
+.full_icon_parent:hover > .full_icon {
+  font-size: 19px;
+}
+.left {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+@media (max-width: 766px) {
+  .center {
+    width: 80%;
+  }
+  .parent {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  .name_music_parent {
+    min-width: 100px;
+    font-weight: normal;
+  }
+  .player_parent {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .name_music_parent > span {
+    font-size: 12px;
+  }
+  .name_music_parent > p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 300px) {
+  .player_parent {
+    display: block;
+  }
+  .center {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    justify-content: right;
+  }
+  .name_music_parent {
+    line-height: 0.6;
+    padding-top: 8px;
+  }
+  .img_music{
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-height: 580px) {
+  .name_music_parent > span {
+    font-size: 10px;
+  }
+  .name_music_parent > p {
+    font-size: 12px;
+  }
+}

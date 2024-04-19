@@ -1,0 +1,20 @@
+.parent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    color: var(--text-color);
+    padding: 0 10px;
+}
+.parent>a{
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+.parent>a:hover{
+    transform: scale(1.1);
+}
+.icon{
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-right: 5px;
+}
