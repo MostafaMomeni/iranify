@@ -14,9 +14,6 @@
     border-top: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
 }
-.parent:hover .image{
-    transform: scale(1.06);
-}
 .image{
     border-radius: 10px;
     width: 90%;

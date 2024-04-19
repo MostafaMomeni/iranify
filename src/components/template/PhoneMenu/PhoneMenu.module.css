@@ -49,14 +49,14 @@
     border-top: 3px solid var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
     bottom: 130%;
-    left: -40vw;
+    left: -37vw;
     position: absolute;
     background-color: var(--menu-color);
     padding: 0;
     z-index: -1;
     opacity: 0;
     transition: 0.3s;
-    transform: translateY(20px);
+    transform: translateY(-20px);
 }
 .pages_ul>li{
     border-bottom: 1px solid black;
@@ -86,6 +86,9 @@
     }
     .icon{
         font-size: 12px;
+    }
+    .pages_ul{
+        left: -35vw;
     }
 }
 @media(max-height:580px){

@@ -19,5 +19,13 @@
     margin-right: 5px;
 }
 @media(max-width: 400px){
-    
+    .parent>a{
+        font-size: 14px;
+    }
+    .icon{
+        font-size: 16px;
+    }
+    .parent>h3{
+        font-size: 18px;
+    }
 }
