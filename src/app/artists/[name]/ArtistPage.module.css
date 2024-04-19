@@ -1,0 +1,107 @@
+.header{
+    background-image: url(../../../../public/Assets/yas-cover.avif);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+}
+.title_header{
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--text-color);
+    position: relative;
+    z-index: 2;
+}
+.title_header::after{
+    content: "";
+    background-color: var(--primary-color);
+    transform: skew(-45deg);
+    position: absolute;
+    top: 60%;
+    right: 0;
+    width: 130px;
+    height: 20px;
+    z-index: -1;
+}
+.count_music_header{
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+.count_music_header::after{
+    content: "";
+    background-color: var(--primary-color);
+    transform: skew(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 130px;
+    height: 20px;
+    z-index: -1;
+}
+.primary{
+    color: var(--primary-color);
+    position: relative;
+}
+.primary::after{
+    content: "";
+    background-color: var(--text-color);
+    transform: skew(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50px;
+    height: 20px;
+    z-index: -1;
+}
+.main{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+.play_music_parent{
+    display: flex;
+    align-items: center;
+}
+.play_music{
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.play_icon{
+    font-size: 18px;
+}
+.follow_btn{
+    border-radius: 20px;
+    padding: 4px 12px;
+    border: 1px solid var(--menu-color);
+    margin-right: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-color);
+    height: fit-content;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.follow_btn:hover{
+    transform: scale(1.1);
+    border: 1px solid var(--text-color);
+}
+@media(max-height:400px){
+    .header{
+        height: 150px;
+    }
+}

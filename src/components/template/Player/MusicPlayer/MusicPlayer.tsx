@@ -20,7 +20,7 @@ export default function MusicPlayer(props: any) {
   const musicData = useContext(MusicContext);
   const music = useRef<HTMLAudioElement>(null);
 
-  const [isPlay, setIsPlay] = useState(false);
+  const [isPlay, setIsPlay] = useState(musicData.isPlay);
   const [width, setWidth] = useState(window.innerWidth);
 
   const theme = useTheme();

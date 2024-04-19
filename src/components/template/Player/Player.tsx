@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
 import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 import VolumePlayer from "./VolumePlayer/VolumePlayer";
-import { MdOpenInFull } from "react-icons/md";
 import MusicPlayer from "./MusicPlayer/MusicPlayer";
 import { MusicContext } from "@/context/MuiscContext";
 import PhoneMenu from "../PhoneMenu/PhoneMenu";

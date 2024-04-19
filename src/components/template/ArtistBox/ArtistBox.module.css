@@ -6,13 +6,11 @@
     text-align: center;
     cursor: pointer;
     display: inline-block;
-    margin: 0 15px;
+    margin: 15px;
     min-width: 150px;
 }
 .parent:hover{
     background-color: var(--hover-color);
-    border-top: 1px solid var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
 }
 .image{
     border-radius: 50%;

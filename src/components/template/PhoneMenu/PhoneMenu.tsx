@@ -23,10 +23,10 @@ export default function PhoneMenu() {
                 <FaWindowRestore className={style.icon} /> صفحات <MdArrowDropUp/>
               </p>
               <ul className={style.pages_ul}>
-               <li><Link href={"search"}>جست و جو</Link></li>
-               <li><Link href={"weblog"}>مقالات</Link></li>
-               <li><Link href={"artist"}>خواننده ها</Link></li>
-               <li><Link href={"likes"}>پسند ها</Link></li>
+               <li><Link href={"/search"}>جست و جو</Link></li>
+               <li><Link href={"/weblog"}>مقالات</Link></li>
+               <li><Link href={"/artist"}>خواننده ها</Link></li>
+               <li><Link href={"/likes"}>پسند ها</Link></li>
               </ul>
           </li>
           <li>

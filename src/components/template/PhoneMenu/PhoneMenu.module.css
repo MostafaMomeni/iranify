@@ -42,6 +42,7 @@
     opacity: 1;
     z-index: 2;
     transform: translateY(0);
+    visibility: visible;
 }
 .pages_ul{
     width: 90vw;
@@ -53,8 +54,9 @@
     position: absolute;
     background-color: var(--menu-color);
     padding: 0;
-    z-index: -1;
+    z-index: -2;
     opacity: 0;
+    visibility: hidden;
     transition: 0.3s;
     transform: translateY(-20px);
 }

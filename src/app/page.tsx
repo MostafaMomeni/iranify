@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* آهنگ های پر طرفدار */}
       <div className='mt-5'>
-        <SectionHeader title="آهنگ های پرطرفدار" link="/new-music" textLink="مشاهده همه"/>
+        <SectionHeader title="آهنگ های پرطرفدار" link="/popular-musics" textLink="مشاهده همه"/>
         <div className={style.new_music_parent}>
           <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
           <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/music/band-naf-ta-khat-saf"/>
