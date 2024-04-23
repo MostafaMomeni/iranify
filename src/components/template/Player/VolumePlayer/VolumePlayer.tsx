@@ -45,13 +45,20 @@ const PrettoSlider = styled(Slider)({
 });
 
 export default function VolumePlayer(props: any) {
+
+  const changeSound = (e : any) =>{
+    if(e.target){
+      props.setSound(e.target?.value)
+    }
+  }
+
   return (
     <div className={style.parent}>
       <PrettoSlider
         valueLabelDisplay="auto"
         aria-label="pretto slider"
         defaultValue={props.sound}
-        // onChange={(e) => props.setSound(e.target?.value)}
+        onChange={(e) => changeSound(e)}
       />
     </div>
   );

@@ -18,9 +18,6 @@
     10px 4px 10px 0px rgba(0, 0, 0, 0.5);
   width: 50%;
   transition: 0.5s;
-  background-image: url(../../../public/Assets/bg-login-form.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .form_parent_danger {
   box-shadow: 0px -33px 42px -35px red, 0px 33px 42px -35px red,
@@ -43,8 +40,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
+  /* border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color); */
 }
 .icon_pass {
   cursor: pointer;
@@ -60,6 +57,7 @@
   border-radius: 5px;
   transition: 0.3s;
   padding: 5px;
+  border-radius: 5px;
 }
 .flex {
   display: flex;
@@ -99,8 +97,8 @@
   width: 90%;
 }
 .input_danger {
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
+  /* border-top: 2px solid red;
+  border-bottom: 2px solid red; */
 }
 @media (max-width: 767px) {
   .form_parent {
