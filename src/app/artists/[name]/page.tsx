@@ -33,11 +33,11 @@ export default function page() {
         {/* آهنگ های محبوب */}
         <div className="mt-3">
           <SectionHeader title="پر طرفدار ها" />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
         </div>
 
         {/* خواننده های مرتبط */}
@@ -56,17 +56,17 @@ export default function page() {
         {/* همه آهنگ ها */} 
         <div className="mt-5">
           <SectionHeader title="همه آهنگ ها" />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
         </div>
       </div>
     </div>

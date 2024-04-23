@@ -19,6 +19,7 @@ export default function TrackListItem(props: any) {
   return (
     <div className={style.parent}>
       <div className={style.right}>
+        {props.playIcon && (
         <div className={style.play_music} onClick={() => setIsPlay(!isPlay)}>
           {isPlay ? (
             <FaPause className={style.play_icon} />
@@ -26,6 +27,7 @@ export default function TrackListItem(props: any) {
             <FaPlay className={style.play_icon} />
           )}
         </div>
+        )}
         <Link className={style.link} href={`/tracks/${props.link}`}>
           <Image
             className={style.image}

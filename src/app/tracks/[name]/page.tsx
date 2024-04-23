@@ -89,21 +89,21 @@ export default function page() {
         {/* آهنگ های مشابه */}
         <div className="mt-5">
           <SectionHeader title="آهنگ های مشابه" />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
         </div>
 
         {/* آهنگ های همون خواننده */}
         <div className="mt-5">
           <SectionHeader title="از یاس" />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
-          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
+          <TrackListItem title="بیم" image="yas.webp" link="beem" time={220} playIcon />
         </div>
 
         {/* خواننده های دیگر */}
