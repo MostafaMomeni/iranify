@@ -8,7 +8,12 @@ export default function SectionHeader(props : any) {
     <div className={style.parent}>
         <h3>{props.title}</h3>
         {props.link && props.textLink && (
-            <Link href={props.link}>{props.textLink} <FaLongArrowAltLeft className={style.icon}/></Link>
+          <>
+          <div>
+            <Link href={props.link} className={style.text_link}>{props.textLink}</Link>
+            <Link href={props.link}><FaLongArrowAltLeft className={style.icon}/></Link>
+          </div>
+          </>
         )}
     </div>
   )

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import style from "./Login.module.css";
+import style from "@/Styles/Login.module.css";
 import { IoEyeSharp } from "react-icons/io5";
 import { FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";

@@ -12,7 +12,6 @@
     list-style: none;
     color: var(--text-color);
     margin: 0;
-    margin-top: 7px;
     padding: 2px;
 }
 .ul>li p{

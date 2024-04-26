@@ -12,10 +12,13 @@
 .parent:hover{
     background-color: var(--hover-color);
 }
+.top{
+    height: -webkit-fill-available;
+;
+}
 .image{
     border-radius: 50%;
     width: 90%;
-    height: auto;
     box-shadow: -2px 4px 18px 3px rgba(0, 0, 0, 0.4);
 }
 .bottom{

@@ -14,13 +14,14 @@ export default function Player() {
 
   const [isLiked, setIsLiked] = useState(false);
   const [sound, setSound] = useState(100);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
 
-  const reSize = () => {
+  useEffect(() => {
+    const reSize = () => {
+      setWidth(window.innerWidth);
+    };
+
     setWidth(window.innerWidth);
-  };
-
-  useMemo(() => {
     window.addEventListener("resize", reSize);
   }, []);
 
@@ -29,13 +30,13 @@ export default function Player() {
       <div className={style.parent}>
         <div className={style.player_parent}>
           <div className={style.right}>
-              <Image
-                src={`/Assets/${musicData.cover}`}
-                alt="yas"
-                width={55}
-                height={55}
-                className={style.img_music}
-              />
+            <Image
+              src={`/Assets/${musicData.cover}`}
+              alt="yas"
+              width={55}
+              height={55}
+              className={style.img_music}
+            />
             <div className={style.name_music_parent}>
               <p>بند ناف تا خط صاف</p>
               <span>{musicData.artist}</span>

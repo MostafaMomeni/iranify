@@ -17,14 +17,19 @@ const TinyText = styled(Typography)({
 });
 
 export default function MusicPlayer(props: any) {
+
+  
   const musicData = useContext(MusicContext);
   const music = useRef<HTMLAudioElement>(null);
 
   const [isPlay, setIsPlay] = useState(musicData.isPlay);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
 
   const theme = useTheme();
-  const duration = music.current ? Math.floor(music.current?.duration) : 0; // seconds
+  let duration = 0
+  if(music.current && isPlay){
+    duration = Math.floor(music.current.duration);
+  }
   const [position, setPosition] = useState(0);
 
   function formatDuration(value: number) {
@@ -33,12 +38,14 @@ export default function MusicPlayer(props: any) {
     return `${minute}:${secondLeft < 10 ? `0${secondLeft}` : secondLeft}`;
   }
 
-  const reSize = () => {
-    setWidth(window.innerWidth);
-  };
 
-  useMemo(() => {
-    window.addEventListener("resize", reSize);
+  useEffect(() => {
+    const reSize = () => {
+        setWidth(window.innerWidth);
+    };
+
+      setWidth(window.innerWidth);
+      window.addEventListener("resize", reSize);
   }, []);
 
   useEffect(() => {
@@ -49,7 +56,7 @@ export default function MusicPlayer(props: any) {
 
   useEffect(() => {
     if (position == duration) {
-      setIsPlay(false)
+      setIsPlay(false);
     }
   }, [position]);
 
@@ -62,7 +69,7 @@ export default function MusicPlayer(props: any) {
   };
 
   setInterval(() => {
-    if(music.current !== null){
+    if (music.current !== null) {
       setPosition(Math.floor(music.current?.currentTime));
     }
   }, 500);
@@ -114,8 +121,8 @@ export default function MusicPlayer(props: any) {
               setPosition(value as number);
               music.current !== null &&
                 (music.current.currentTime = value as number);
-                music.current?.play()
-                setIsPlay(true)
+              music.current?.play();
+              setIsPlay(true);
             }}
             sx={{
               color: "var(--select-color)",

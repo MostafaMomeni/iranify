@@ -1,5 +1,5 @@
 import React from 'react'
-import style from "./Artists.module.css"
+import style from "@/Styles/Artists.module.css"
 import SectionHeader from '@/components/template/SectionHeader/SectionHeader'
 import ArtistBox from '@/components/template/ArtistBox/ArtistBox'
 

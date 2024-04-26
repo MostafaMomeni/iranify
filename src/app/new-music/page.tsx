@@ -1,5 +1,5 @@
 import React from 'react'
-import style from "./newMusic.module.css"
+import style from "@/Styles/newMusic.module.css"
 import SectionHeader from '@/components/template/SectionHeader/SectionHeader'
 import MusicBox from '@/components/template/MusicBox/MusicBox'
 

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import style from "./ArtistPage.module.css";
+import style from "@/Styles/ArtistPage.module.css";
 import { FaPlay, FaPause } from "react-icons/fa6";
 import SectionHeader from "@/components/template/SectionHeader/SectionHeader";
-import TrackListItem from "@/components/TrackListItem/TrackListItem";
+import TrackListItem from "@/components/template/TrackListItem/TrackListItem";
 import ArtistBox from "@/components/template/ArtistBox/ArtistBox";
 
 export default function page() {

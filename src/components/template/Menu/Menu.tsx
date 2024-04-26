@@ -1,32 +1,30 @@
-"use client"
-import React, { useMemo, useState } from 'react'
-import NavBar from '../Navbar/NavBar'
-import Library from '../Library/Library'
-import PhoneMenu from '../PhoneMenu/PhoneMenu';
+"use client";
+import React, { useEffect, useMemo, useState } from "react";
+import NavBar from "../Navbar/NavBar";
+import Library from "../Library/Library";
 
 export default function Menu() {
+  const [width, setWidth] = useState(0);
 
-    const [width, setWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
     const reSize = () => {
         setWidth(window.innerWidth);
-      };
-    
-      useMemo(() => {
-        window.addEventListener("resize", reSize);
-      }, []);
-
+    };
+      setWidth(window.innerWidth);
+      window.addEventListener("resize", reSize);
+  }, []);
 
   return (
     <>
-    {width > 767 ? (
+      {width > 767 ? (
         <>
-            <NavBar/>
-            <Library/>
+          <NavBar />
+          <Library />
         </>
-    ) : (
+      ) : (
         <></>
-    )}
+      )}
     </>
-  )
+  );
 }

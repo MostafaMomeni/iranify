@@ -1,11 +1,11 @@
 .parent{
     background-color: var(--bg-base);
     border-radius: 5px;
-    margin: 7px;
+    margin: 15px 7px;
     width: 100%;
     color: var(--text-color);
     padding: 15px;
-    height: calc(100% - 180px);
+    height: calc(100% - 178px);
     display: flex;
     flex-direction: column;
 }
@@ -82,15 +82,6 @@
     cursor: pointer;
     position: relative;
 }
-.sort_parent:hover{
-    transform: scale(1.1);
-}
-.sort_parent:hover .sort_ul{
-    transform: translateX(0);
-    opacity: 1;
-    z-index: 2;
-    visibility: visible;
-}
 .sort_ul{
     position: absolute;
     top: 0px;
@@ -105,6 +96,12 @@
     transform: translateX(20px);
     z-index: -1;
     visibility: hidden;
+}
+.sort_parent:hover .sort_ul{
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
 }
 .sort_ul>li{
     width: 150px;

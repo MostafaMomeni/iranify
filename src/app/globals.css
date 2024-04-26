@@ -118,7 +118,7 @@ background: #555;
 }
 @media(max-width:300px){
   .main-layout{
-    height: calc(100vh - 160px);
+    height: calc(100vh - 127px);
   }
   @media(max-height:580px){
     .main-layout{

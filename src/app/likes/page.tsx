@@ -1,7 +1,7 @@
 import React from 'react'
-import style from "./Likes.module.css"
+import style from "@/Styles/Likes.module.css"
 import SectionHeader from '@/components/template/SectionHeader/SectionHeader'
-import TrackListItem from '@/components/TrackListItem/TrackListItem'
+import TrackListItem from '@/components/template/TrackListItem/TrackListItem'
 import { FaTrashAlt } from "react-icons/fa";
 import { IoIosSearch } from 'react-icons/io';
 

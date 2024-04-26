@@ -1,11 +1,10 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from "./Header.module.css"
 import Link from 'next/link'
 import { IoIosArrowForward , IoIosArrowBack  } from "react-icons/io";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-
 
 export default function header() {
   return (

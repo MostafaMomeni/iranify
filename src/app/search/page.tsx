@@ -1,9 +1,9 @@
 import React from 'react'
-import style from "./Search.module.css"
+import style from "@/Styles/Search.module.css"
 import { IoIosSearch } from "react-icons/io";
 import SectionHeader from '@/components/template/SectionHeader/SectionHeader';
 import ArtistBox from '@/components/template/ArtistBox/ArtistBox';
-import TrackListItem from '@/components/TrackListItem/TrackListItem';
+import TrackListItem from '@/components/template/TrackListItem/TrackListItem';
 
 export default function search() {
   return (
