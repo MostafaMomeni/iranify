@@ -9,3 +9,13 @@
     height: 300px;
     border-radius: 5px;
 }
+@media(max-width:767px){
+    .image , .parent{
+        height: 250px;
+    }
+}
+@media(max-width:300px){
+    .image , .parent{
+        height: 200px;
+    }
+}

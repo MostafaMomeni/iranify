@@ -1,25 +1,31 @@
 .parent{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin:15px 0;
     color: var(--text-color);
-    padding: 0 10px;
-}
-.parent>h3{
+    padding: 3px 10px;
+    background-color: var(--menu-color);
+    border-radius: 25px;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
-.parent>h3:after{
+.parent:after{
     content: "";
-    background-color: var(--primary-color);
-    transform: skew(-45deg);
     position: absolute;
-    top: 55%;
-    right: 5px;
-    width: 120%;
-    height: 20px;
-    z-index: -1;
+    width: 65%;
+    height: 150%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: var(--primary-color);
+    right: -2px;
+    top: 0;
+    z-index: 0;
+}
+.parent>h3{
+    z-index: 2;
+    margin: 0;
 }
 .parent>div>a{
     color: var(--primary-color);
