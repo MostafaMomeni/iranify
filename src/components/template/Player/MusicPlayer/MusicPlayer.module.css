@@ -46,7 +46,7 @@
 }
 @media (max-width: 766px) {
   .parent {
-    width: 90%;
+    width: 100%;
   }
 }
 @media (max-width: 300px) {
@@ -54,7 +54,7 @@
     display: none;
   }
   .parent {
-    width: 95%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
@@ -78,8 +78,5 @@
   .prev_next_icon {
     font-size: 20px;
     margin: 0;
-  }
-  .timeLine {
-    padding: 10px 0;
   }
 }

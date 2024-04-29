@@ -13,8 +13,8 @@ export default function page() {
     <div className={style.parent}>
       <div className={style.header}>
         <h1 className={style.title_header}>یاس</h1>
-        <h3 className={style.count_music_header}>
-          تعداد آهنگ <span className={style.primary}>15</span>
+        <h3 className={style.full_name_header}>
+          یاسر بختیاری
         </h3>
       </div>
 

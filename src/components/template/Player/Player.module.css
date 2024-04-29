@@ -13,6 +13,7 @@
 }
 .right {
   display: flex;
+  align-items: center;
 }
 .name_music_parent {
   margin-right: 10px;
@@ -69,9 +70,16 @@
   margin-left: 15px;
   margin-top: 10px;
 }
+.timeLine_parent {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 766px) {
   .center {
-    width: 80%;
+    width: auto;
+    margin-left: 5%;
   }
   .parent {
     position: fixed;
@@ -85,6 +93,7 @@
   }
   .player_parent {
     width: 100%;
+    justify-content: space-between;
   }
   .left{
     display: none;
@@ -97,17 +106,13 @@
   .name_music_parent > p {
     font-size: 14px;
   }
+  .timeLine {
+    padding: 10px 0;
+  }
 }
 @media (max-width: 380px) {
-  .player_parent {
-    display: block;
-  }
-  .center {
-    width: 100%;
-  }
-  .right {
-    width: 100%;
-    justify-content: center;
+  .center{
+    margin-left: 2%;
   }
   .name_music_parent {
     line-height: 0.6;

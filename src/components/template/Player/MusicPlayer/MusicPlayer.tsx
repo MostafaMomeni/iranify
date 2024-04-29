@@ -20,7 +20,8 @@ export default function MusicPlayer(props: any) {
 
   
   const musicData = useContext(MusicContext);
-  const music = useRef<HTMLAudioElement>(null);
+  const music = props.audio;
+
 
   const [isPlay, setIsPlay] = useState(musicData.isPlay);
   const [width, setWidth] = useState(0);
@@ -54,17 +55,24 @@ export default function MusicPlayer(props: any) {
     }
   }, [props.sound]);
 
+  useEffect(()=>{
+    setIsPlay(musicData.isPlay)
+  },[musicData.isPlay])
+
   useEffect(() => {
     if (position == duration) {
       setIsPlay(false);
+      musicData.isPlay = false
     }
   }, [position]);
 
   const playHandler = () => {
     if (isPlay) {
       music.current?.pause();
+      musicData.isPlay = false
     } else {
       music.current?.play();
+      musicData.isPlay = true
     }
   };
 
@@ -77,7 +85,7 @@ export default function MusicPlayer(props: any) {
   return (
     <>
       <div className={style.parent}>
-        <audio src={`/Sounds/${musicData.sound}`} ref={music}></audio>
+        {/* <audio src={`/Sounds/${musicData.sound}`} ref={music}></audio> */}
 
         <div className={style.top}>
           <div>
@@ -100,6 +108,7 @@ export default function MusicPlayer(props: any) {
             <MdSkipPrevious className={style.prev_next_icon} />
           </div>
         </div>
+        {width > 767 && (
         <div className={style.timeLine_parent}>
           <Box
             sx={{
@@ -122,6 +131,7 @@ export default function MusicPlayer(props: any) {
               music.current !== null &&
                 (music.current.currentTime = value as number);
               music.current?.play();
+              musicData.isPlay = true
               setIsPlay(true);
             }}
             sx={{
@@ -160,6 +170,7 @@ export default function MusicPlayer(props: any) {
             <TinyText>{formatDuration(position)}</TinyText>
           </Box>
         </div>
+        )}
       </div>
     </>
   );

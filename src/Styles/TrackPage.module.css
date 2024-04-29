@@ -179,7 +179,7 @@
     line-height: 1;
   }
 }
-@media(max-width:400px){
+@media(max-width:450px){
     .text_music_title::after , .text_music_title::before{
         content: "";
     }
