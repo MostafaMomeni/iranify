@@ -117,6 +117,7 @@ ul {
   }
   .main-layout{
     height: calc(100vh - 110px);
+    padding-bottom: 70px;
   }
 }
 @media (max-width: 300px) {

@@ -42,3 +42,13 @@
   color: var(--text-color);
   font-size: 18px;
 }
+.trash_btn{
+  color: var(--primary-color);
+  margin-right: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.trash_btn:hover{
+  color: red;
+  transform: scale(1.1);
+}

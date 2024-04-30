@@ -59,6 +59,21 @@ export default function MusicPlayer(props: any) {
     setIsPlay(musicData.isPlay)
   },[musicData.isPlay])
 
+  useEffect(()=>{
+    // setIsPlay(false)
+    // musicData.isPlay = false
+    duration = 0
+    setPosition(0)
+
+    if (!isPlay) {
+      music.current?.pause();
+      musicData.isPlay = false
+    } else {
+      music.current?.play();
+      musicData.isPlay = true
+    }
+  },[musicData.sound])
+
   useEffect(() => {
     if (position == duration) {
       setIsPlay(false);
@@ -85,11 +100,12 @@ export default function MusicPlayer(props: any) {
   return (
     <>
       <div className={style.parent}>
-        {/* <audio src={`/Sounds/${musicData.sound}`} ref={music}></audio> */}
 
         <div className={style.top}>
           <div>
-            <MdSkipNext className={style.prev_next_icon} />
+            <MdSkipNext className={style.prev_next_icon} onClick={()=>{
+              musicData.sound = "Yas - Zende Bad Iran.mp3"
+            }} />
           </div>
           <div
             className={style.play_icon_parent}

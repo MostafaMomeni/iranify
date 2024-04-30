@@ -15,7 +15,11 @@
   font-weight: bold;
   position: relative;
   z-index: 2;
-  background-image:linear-gradient(107deg, rgba(255,255,255,1) 92%, rgba(30,215,96,1) 100%);
+  background-image: linear-gradient(
+    107deg,
+    rgba(255, 255, 255, 1) 92%,
+    var(--primary-color) 100%
+  );
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -27,7 +31,11 @@
   margin-top: 10px;
   position: relative;
   z-index: 2;
-  background-image:linear-gradient(107deg, rgba(255,255,255,1) 92%, rgba(30,215,96,1) 100%);
+  background-image: linear-gradient(
+    107deg,
+    rgba(255, 255, 255, 1) 92%,
+    var(--primary-color) 100%
+  );
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -84,6 +92,16 @@
 }
 .artist_parent::-webkit-scrollbar {
   display: none;
+}
+@media (max-width: 767px) {
+  .title_header,
+  .full_name_header {
+    background-image: linear-gradient(
+      107deg,
+      rgba(255, 255, 255, 1) 70%,
+      var(--primary-color) 100%
+    );
+  }
 }
 @media (max-height: 400px) {
   .header {

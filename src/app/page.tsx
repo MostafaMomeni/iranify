@@ -32,13 +32,13 @@ export default function Home() {
       <div className='mt-4'>
         <SectionHeader title="آهنگ های جدید" link="/new-music" textLink="مشاهده همه"/>
         <div className={style.new_music_parent}>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="artist.jpg" link="/tracks/band-naf-ta-khat-saf"/>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="artist.jpg" link="/tracks/band-naf-ta-khat-saf"/>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/tracks/band-naf-ta-khat-saf"/>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="yas.webp" link="/tracks/band-naf-ta-khat-saf"/>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="peshro.jpg" link="/tracks/band-naf-ta-khat-saf"/>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="peshro.jpg" link="/tracks/band-naf-ta-khat-saf"/>
-          <MusicBox  title="بند ناف تا خط صاف" artist="یاس" src="artist.jpg" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="artist.jpg" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="artist.jpg" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="yas.webp" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="yas.webp" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="peshro.jpg" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="peshro.jpg" link="/tracks/band-naf-ta-khat-saf"/>
+          <MusicBox  title="من میجنگم" artist="یاس" src="artist.jpg" link="/tracks/band-naf-ta-khat-saf"/>
         </div>
       </div>
 

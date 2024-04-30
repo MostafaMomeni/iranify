@@ -30,6 +30,7 @@
     color: var(--text-color);
     font-size:18px;
     font-weight: bold;
+    height: 50px;
     margin: 0;
 }
 .bottom>span{

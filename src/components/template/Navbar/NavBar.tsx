@@ -39,7 +39,6 @@ export default function NavBar() {
               </p>
               <ul className={style.pages_ul}>
                <li><Link href={"/search"}>جست و جو</Link></li>
-               <li><Link href={"/weblogs"}>مقالات</Link></li>
                <li><Link href={"/artists"}>خواننده ها</Link></li>
                <li><Link href={"/likes"}>پسند ها</Link></li>
               </ul>

@@ -1,12 +1,23 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import style from "./PhoneMenu.module.css";
 import { IoMdHome } from "react-icons/io";
 import { FaWindowRestore } from "react-icons/fa";
 import { LuLibrary } from "react-icons/lu";
 import { MdArrowDropUp } from "react-icons/md";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function PhoneMenu() {
+
+  const route = usePathname()
+
+  const [isShowMenu , setIsShowMenu] = useState(false)
+
+  useEffect(()=>{
+    setIsShowMenu(false)
+  },[route])
+
   return (
     <>
       <div className={style.parent}>
@@ -19,12 +30,11 @@ export default function PhoneMenu() {
             </Link>
           </li>
           <li className={style.dropdown}>
-              <p>
+              <p onClick={()=> setIsShowMenu(!isShowMenu)}>
                 <FaWindowRestore className={style.icon} /> صفحات <MdArrowDropUp/>
               </p>
-              <ul className={style.pages_ul}>
+              <ul className={`${isShowMenu ? style.active_pages_ul : ""} ${style.pages_ul}`}>
                <li><Link href={"/search"}>جست و جو</Link></li>
-               <li><Link href={"/weblog"}>مقالات</Link></li>
                <li><Link href={"/artists"}>خواننده ها</Link></li>
                <li><Link href={"/likes"}>پسند ها</Link></li>
               </ul>
@@ -37,6 +47,7 @@ export default function PhoneMenu() {
             </Link>
           </li>
         </ul>
+          <div className={isShowMenu ? style.full_dark_bg : ""} onClick={()=>setIsShowMenu(false)}></div>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import style from "./TrackListItem.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPlay, FaPause } from "react-icons/fa6";
+import { FaTrashAlt } from "react-icons/fa";
 
 
 export default function TrackListItem(props: any) {
@@ -39,7 +40,14 @@ export default function TrackListItem(props: any) {
           <p>{props.title}</p>
         </Link>
       </div>
-      <div className={style.left}>{formatDuration(props.time)}</div>
+      <div className={style.left}>
+        {formatDuration(props.time)}
+        {props.deleteBtn && (
+          <>
+          <FaTrashAlt className={style.trash_btn}/>
+          </>
+        )}
+        </div>
     </div>
   );
 }

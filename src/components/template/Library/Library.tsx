@@ -50,13 +50,13 @@ export default function Library() {
             </span>
         </div>
         <div className={style.items_parent}>
-            <LibraryItem mode={itemMode}/>
-            <LibraryItem mode={itemMode}/>
-            <LibraryItem mode={itemMode}/>
-            <LibraryItem mode={itemMode}/>
-            <LibraryItem mode={itemMode}/>
-            <LibraryItem mode={itemMode}/>
-            <LibraryItem mode={itemMode}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
+            <LibraryItem mode={itemMode} link={"yas"}/>
         </div>
     </div>
   )
