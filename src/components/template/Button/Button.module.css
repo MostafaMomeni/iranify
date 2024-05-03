@@ -18,5 +18,5 @@
   
   .button:hover {
     transform: skew(-10deg) translateY(8px);
-    box-shadow: 0 0 0 var(--😀😀😀);
+    box-shadow: 0 8px 0 #0e5125;
   }
