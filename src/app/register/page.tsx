@@ -9,16 +9,15 @@ import Form from "react-bootstrap/Form";
 export default function page() {
   const [isShowPass, setIsShowPass] = useState(false);
 
-  const [userName , setUserName] = useState("")
-  const [email , setEmail] = useState("")
-  const [password , setPassword] = useState("")
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [isRememberMe , setIsRememberMe] = useState(false)
+  const [isRememberMe, setIsRememberMe] = useState(false);
 
-  const [isFormErrorName , setIsFormErrorName] = useState(false)
-  const [isFormErrorEmail , setIsFormErrorEmail] = useState(false)
-  const [isFormErrorPass , setIsFormErrorPass] = useState(false)
-
+  const [isFormErrorName, setIsFormErrorName] = useState(false);
+  const [isFormErrorEmail, setIsFormErrorEmail] = useState(false);
+  const [isFormErrorPass, setIsFormErrorPass] = useState(false);
 
   const input = useRef<HTMLInputElement>(null);
 
@@ -40,43 +39,61 @@ export default function page() {
     }
   }, [isShowPass]);
 
-  const submitHandler = (e :  React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
-    e.preventDefault()
-    if(!userName.trim()){
-       userNameSpan.current !== null && (userNameSpan.current.style.display = "block")
-       userNameInput.current !== null && (userNameInput.current.classList.add(style.input_danger))
-       setIsFormErrorName(true)
-    }else{
-        userNameSpan.current !== null && (userNameSpan.current.style.display = "none")
-        userNameInput.current !== null && (userNameInput.current.classList.remove(style.input_danger))
-        setIsFormErrorName(false)
-    };
-    
-    if(!email.trim()){
-        emailSpan.current !== null && (emailSpan.current.style.display = "block")
-        emailInput.current !== null && (emailInput.current.classList.add(style.input_danger))
-        setIsFormErrorEmail(true)
-    }else{
-        emailSpan.current !== null && (emailSpan.current.style.display = "none")
-        emailInput.current !== null && (emailInput.current.classList.remove(style.input_danger))
-        setIsFormErrorEmail(false)
-    };
-    
-    if(password.trim().length < 8){
-        passwordSpan.current !== null && (passwordSpan.current.style.display = "block")
-        passwordInput.current !== null && (passwordInput.current.classList.add(style.input_danger))
-        setIsFormErrorPass(true)
-    }else{
-        passwordSpan.current !== null && (passwordSpan.current.style.display = "none")
-        passwordInput.current !== null && (passwordInput.current.classList.remove(style.input_danger))
-        setIsFormErrorPass(false)
+  const submitHandler = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    if (!userName.trim()) {
+      userNameSpan.current !== null &&
+        (userNameSpan.current.style.display = "block");
+      userNameInput.current !== null &&
+        userNameInput.current.classList.add(style.input_danger);
+      setIsFormErrorName(true);
+    } else {
+      userNameSpan.current !== null &&
+        (userNameSpan.current.style.display = "none");
+      userNameInput.current !== null &&
+        userNameInput.current.classList.remove(style.input_danger);
+      setIsFormErrorName(false);
     }
-  }
+
+    if (!email.trim()) {
+      emailSpan.current !== null && (emailSpan.current.style.display = "block");
+      emailInput.current !== null &&
+        emailInput.current.classList.add(style.input_danger);
+      setIsFormErrorEmail(true);
+    } else {
+      emailSpan.current !== null && (emailSpan.current.style.display = "none");
+      emailInput.current !== null &&
+        emailInput.current.classList.remove(style.input_danger);
+      setIsFormErrorEmail(false);
+    }
+
+    if (password.trim().length < 8) {
+      passwordSpan.current !== null &&
+        (passwordSpan.current.style.display = "block");
+      passwordInput.current !== null &&
+        passwordInput.current.classList.add(style.input_danger);
+      setIsFormErrorPass(true);
+    } else {
+      passwordSpan.current !== null &&
+        (passwordSpan.current.style.display = "none");
+      passwordInput.current !== null &&
+        passwordInput.current.classList.remove(style.input_danger);
+      setIsFormErrorPass(false);
+    }
+  };
 
   return (
     <>
       <div className={style.parent}>
-        <div className={`${style.form_parent} ${isFormErrorEmail || isFormErrorPass || isFormErrorName ? style.form_parent_danger : ""}`}>
+        <div
+          className={`${style.form_parent} ${
+            isFormErrorEmail || isFormErrorPass || isFormErrorName
+              ? style.form_parent_danger
+              : ""
+          }`}
+        >
           <svg
             role="img"
             viewBox="0 0 78 24"
@@ -99,20 +116,24 @@ export default function page() {
                 placeholder="نام کاربری خود را وارد کنید"
                 className={style.input}
                 value={userName}
-                onChange={(e)=> setUserName(e.target.value)}
+                onChange={(e) => setUserName(e.target.value)}
               />
             </div>
-            <span className={style.span_danger} ref={userNameSpan}>نام کاربری را وارد کنید❌</span>
+            <span className={style.span_danger} ref={userNameSpan}>
+            ❌نام کاربری را وارد کنید
+            </span>
             <div className={style.input_parent} ref={emailInput}>
               <input
                 type="email"
                 placeholder="ایمیل خود را وارد کنید"
                 className={style.input}
                 value={email}
-                onChange={(e)=> setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <span className={style.span_danger} ref={emailSpan}>ایمیل را وارد کنید❌</span>
+            <span className={style.span_danger} ref={emailSpan}>
+            ❌ایمیل را وارد کنید
+            </span>
 
             <div className={style.input_parent} ref={passwordInput}>
               <input
@@ -121,7 +142,7 @@ export default function page() {
                 placeholder="رمز عبور خود را وارد کنید"
                 className={style.input}
                 value={password}
-                onChange={(e)=> setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
               {isShowPass ? (
                 <FaEyeSlash
@@ -135,19 +156,28 @@ export default function page() {
                 />
               )}
             </div>
-            <span className={style.span_danger} ref={passwordSpan}>رمز عبور باید حداقل 8 کاراکتر باشد ❌</span>
+            <span className={style.span_danger} ref={passwordSpan}>
+            ❌رمز عبور باید حداقل 8 کاراکتر باشد
+            </span>
             <div className={style.flex}>
-              <div>
-                <Form.Check
-                  reverse
-                  label="مرا به خاطر بسپار"
-                  type={"checkbox"}
-                  id={`remember-me`}
-                  onChange={(e)=> setIsRememberMe(e.target.checked)}
-                />
-              </div>
+
+              <label className={style.container}>
+                <input type="checkbox" />
+                <svg viewBox="0 0 64 64" height="2em" width="2em">
+                  <path
+                    d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                    pathLength="575.0541381835938"
+                    className={style.path}
+                  ></path>
+                </svg>
+                <span className="me-2">من را به خاطر بسپار</span>
+              </label>
+
             </div>
-            <button className={style.btn} onClick={(e)=> submitHandler(e)}> ثبت نام </button>
+            <button className={style.btn} onClick={(e) => submitHandler(e)}>
+              {" "}
+              ثبت نام{" "}
+            </button>
             <p className="mt-3">
               آیا اکانت دارید؟{" "}
               <Link href={"/login"} className={style.link}>

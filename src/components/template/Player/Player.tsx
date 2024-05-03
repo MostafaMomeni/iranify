@@ -127,6 +127,7 @@ export default function Player() {
                 value={position}
                 min={0}
                 step={1}
+                style={{direction:"ltr"}}
                 className={style.timeLine}
                 max={duration}
                 onChange={(_, value) => {

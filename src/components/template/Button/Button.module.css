@@ -1,0 +1,22 @@
+.button {
+    cursor: pointer;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 18px;
+    color: #fff;
+    background: var(--primary-color);
+    border: 2px solid #0e5125;
+    border-radius: .75rem;
+    box-shadow: 0 8px 0 #0e5125;
+    transform: skew(-10deg);
+    transition: all .1s ease;
+    filter: drop-shadow(0 15px 20px #063a18);
+  }
+  
+  .button:hover {
+    transform: skew(-10deg) translateY(8px);
+    box-shadow: 0 0 0 var(--😀😀😀);
+  }

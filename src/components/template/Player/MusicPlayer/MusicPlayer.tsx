@@ -139,6 +139,7 @@ export default function MusicPlayer(props: any) {
             size="small"
             value={position}
             min={0}
+            style={{direction:"ltr"}}
             step={1}
             className={style.timeLine}
             max={duration}

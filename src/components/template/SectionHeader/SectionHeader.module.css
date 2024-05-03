@@ -9,18 +9,12 @@
   background-color: var(--menu-color);
   border-radius: 25px;
   z-index: 2;
+  background: linear-gradient(
+    160deg,
+    var(--menu-color) 50%,
+    var(--primary-color) 100%
+  );
 }
-/* .parent:after{
-    content: "";
-    position: absolute;
-    width: 65%;
-    height: 150%;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    background-color: var(--primary-color);
-    right: -2px;
-    top: 0;
-    z-index: 0;
-} */
 .title {
   z-index: 2;
   margin: 0;

@@ -100,7 +100,7 @@ export default function page() {
               />
             </div>
             <span className={style.span_danger} ref={emailSpan}>
-              ایمیل را وارد کنید❌
+              ❌ایمیل را وارد کنید
             </span>
 
             <div className={style.input_parent} ref={passwordInput}>
@@ -125,18 +125,22 @@ export default function page() {
               )}
             </div>
             <span className={style.span_danger} ref={passwordSpan}>
-              رمز عبور باید حداقل 8 کاراکتر باشد ❌
+              ❌رمز عبور باید حداقل 8 کاراکتر باشد
             </span>
 
             <div className={style.flex}>
-              <div>
-                <Form.Check
-                  reverse
-                  label="مرا به خاطر بسپار"
-                  type={"checkbox"}
-                  id={`remember-me`}
-                />
-              </div>
+              <label className={style.container}>
+                <input type="checkbox" />
+                <svg viewBox="0 0 64 64" height="2em" width="2em">
+                  <path
+                    d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                    pathLength="575.0541381835938"
+                    className={style.path}
+                  ></path>
+                </svg>
+                <span className="me-2">من را به خاطر بسپار</span>
+              </label>
+
               <Link href={"/forget-password"}>رمز خود را فراموش کرده اید؟</Link>
             </div>
 

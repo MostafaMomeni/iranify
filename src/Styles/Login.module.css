@@ -70,7 +70,7 @@
   justify-content: space-between;
   width: 90%;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .flex > a,
 .link {
@@ -105,10 +105,37 @@
   width: 90%;
   text-align: right;
 }
-.input_danger {
-  /* border-top: 2px solid red;
-  border-bottom: 2px solid red; */
+/* start check box */
+.container {
+  cursor: pointer;
 }
+
+.container input {
+  display: none;
+}
+
+.container svg {
+  overflow: visible;
+  width: 20px;
+  height: 20px;
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.container input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+
 @media (max-width: 767px) {
   .form_parent {
     width: 95%;

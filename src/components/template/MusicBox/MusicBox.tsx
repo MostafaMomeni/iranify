@@ -2,6 +2,7 @@ import React from "react";
 import style from "./MusicBox.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../Button/Button";
 
 export default function MusicBox(props : any) {
   return (
@@ -19,7 +20,9 @@ export default function MusicBox(props : any) {
         <div className={style.bottom}>
           <p>{props.title}</p>
           <span>{props.artist}</span>
-          <Link href={props.link} className={style.btn}>مشاهده جزییات</Link>
+          <Link href={props.link} className={style.btn}>
+            <Button text="مشاهده جزییات"/>
+          </Link>
         </div>
       </Link>
     </div>
