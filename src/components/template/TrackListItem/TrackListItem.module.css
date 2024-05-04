@@ -9,16 +9,25 @@
   border-left: 2px solid var(--primary-color);
   border-right: 2px solid var(--primary-color);
   box-shadow: -4px 0px 20px 3px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(
+  /* background: linear-gradient(
     178deg,
     var(--bg-base) 60%,
+    var(--primary-color) 100%
+  ); */
+  background: linear-gradient(
+    152deg,
+    var(--primary-color) 0%,
+    var(--bg-base) 25%,
+    var(--bg-base) 75%,
     var(--primary-color) 100%
   );
 }
 .parent:hover {
   background: linear-gradient(
-    178deg,
-    var(--hover-color) 60%,
+    152deg,
+    var(--primary-color) 0%,
+    var(--hover-color) 25%,
+    var(--hover-color) 75%,
     var(--primary-color) 100%
   );
   box-shadow: 20px 0px 22px -18px var(--primary-color),

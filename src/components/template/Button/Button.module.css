@@ -1,6 +1,6 @@
-.button {
+/* .button {
     cursor: pointer;
-    width: 95%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,9 +14,82 @@
     transform: skew(-10deg);
     transition: all .1s ease;
     filter: drop-shadow(0 15px 20px #063a18);
+    margin-bottom: 5px;
   }
-  
   .button:hover {
     transform: skew(-10deg) translateY(8px);
-    box-shadow: 0 8px 0 #0e5125;
+    box-shadow: 0 8px 0 var(--😁❌😁);
   }
+  @media(max-width:767px){
+    .button{
+      font-size: 10px;
+      padding: 5px;
+    }
+  } */
+
+.button {
+  width: 95%;
+  all: unset;
+  position: relative;
+  padding: 10px;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  color: mediumspringgreen;
+  font-size: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+  box-shadow: -6px 4px 16px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button p {
+  z-index: 1;
+  margin: 0;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+
+@media(max-width:767px){
+  .button{
+    font-size: 8px;
+    padding: 5px;
+  }
+}

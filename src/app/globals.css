@@ -162,11 +162,11 @@ ul {
   .parent-layout {
     display: block;
   }
-  body {
+  /* body {
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
-  }
+  } */
   @media (max-height: 580px) {
     .main-layout {
       height: calc(100vh - 120px);
@@ -185,12 +185,13 @@ ul {
   }
   .main-layout {
     height: calc(100vh - 110px);
-    /* padding-bottom: 70px; */
+    padding-bottom: 70px;
   }
 }
 @media (max-width: 300px) {
   .main-layout {
     height: calc(100vh - 105px);
+    padding-bottom: 90px;
   }
   @media (max-height: 580px) {
     .main-layout {

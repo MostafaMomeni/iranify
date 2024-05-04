@@ -37,6 +37,11 @@
     color: rgb(189, 189, 189);
     font-size: 16px;
 }
+.btn{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+}
 @media(max-width:767px){
     .parent{
         min-width: 100px;
