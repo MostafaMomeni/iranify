@@ -24,7 +24,6 @@ export default function Player() {
   const musicData = useContext(MusicContext);
   const music = useRef<HTMLAudioElement>(null);
 
-  // const [isPlay, setIsPlay] = useState(musicData.isPlay);
   const [isLiked, setIsLiked] = useState(false);
 
   const [sound, setSound] = useState(100);
@@ -55,7 +54,7 @@ export default function Player() {
 
   useEffect(() => {
     if (position == duration) {
-      musicData.isPlay =false;
+      musicData.isPlay = false;
     }
   }, [position]);
 
@@ -64,6 +63,68 @@ export default function Player() {
       setPosition(Math.floor(music.current?.currentTime));
     }
   }, 500);
+
+  // start mediaSession
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: musicData.name,
+      artist: musicData.artist,
+      artwork: [
+        {
+          src: `/Assets/${musicData.cover}`,
+          sizes: "96x96",
+          type: "image/png",
+        },
+        {
+          src: `/Assets/${musicData.cover}`,
+          sizes: "128x128",
+          type: "image/png",
+        },
+        {
+          src: `/Assets/${musicData.cover}`,
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: `/Assets/${musicData.cover}`,
+          sizes: "256x256",
+          type: "image/png",
+        },
+        {
+          src: `/Assets/${musicData.cover}`,
+          sizes: "384x384",
+          type: "image/png",
+        },
+        {
+          src: `/Assets/${musicData.cover}`,
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    });
+
+    navigator.mediaSession.setActionHandler("play", () => {
+      music.current?.play();
+      musicData.isPlay = true;
+    });
+    navigator.mediaSession.setActionHandler("pause", () => {
+      music.current?.pause();
+      musicData.isPlay = false;
+    });
+    navigator.mediaSession.setActionHandler("stop", () => {
+      if (music.current !== null) {
+        music.current.currentTime = 0;
+      }
+      music.current?.pause();
+      musicData.isPlay = false;
+    });
+    navigator.mediaSession.setActionHandler("previoustrack", () => {
+      musicData.sound = "Yas - Esalat.mp3";
+    });
+    navigator.mediaSession.setActionHandler("nexttrack", () => {
+      musicData.sound = "Yas - Zende Bad Iran.mp3";
+    });
+  }
 
   return (
     <>
@@ -127,7 +188,7 @@ export default function Player() {
                 value={position}
                 min={0}
                 step={1}
-                style={{direction:"ltr"}}
+                style={{ direction: "ltr" }}
                 className={style.timeLine}
                 max={duration}
                 onChange={(_, value) => {

@@ -60,8 +60,6 @@ export default function MusicPlayer(props: any) {
   },[musicData.isPlay])
 
   useEffect(()=>{
-    // setIsPlay(false)
-    // musicData.isPlay = false
     duration = 0
     setPosition(0)
 
@@ -121,7 +119,9 @@ export default function MusicPlayer(props: any) {
             )}
           </div>
           <div>
-            <MdSkipPrevious className={style.prev_next_icon} />
+            <MdSkipPrevious className={style.prev_next_icon} onClick={()=>{
+               musicData.sound = "Yas - Esalat.mp3";
+            }}/>
           </div>
         </div>
         {width > 767 && (
