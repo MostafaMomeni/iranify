@@ -103,6 +103,11 @@ export default function MusicPlayer(props: any) {
           <div>
             <MdSkipNext className={style.prev_next_icon} onClick={()=>{
               musicData.sound = "Yas - Zende Bad Iran.mp3"
+              musicData.name = "زنده باد ایران"
+              musicData.artist = "یاس"
+              musicData.cover = "peshro.jpg"
+              musicData.isPlay = true
+              music.current?.play()
             }} />
           </div>
           <div
@@ -121,6 +126,11 @@ export default function MusicPlayer(props: any) {
           <div>
             <MdSkipPrevious className={style.prev_next_icon} onClick={()=>{
                musicData.sound = "Yas - Esalat.mp3";
+               musicData.name = "بیم"
+               musicData.artist = "یاس"
+               musicData.cover = "yas.webp"
+               musicData.isPlay = true
+              music.current?.play()
             }}/>
           </div>
         </div>

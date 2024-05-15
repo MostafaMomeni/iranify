@@ -120,9 +120,19 @@ export default function Player() {
     });
     navigator.mediaSession.setActionHandler("previoustrack", () => {
       musicData.sound = "Yas - Esalat.mp3";
+      musicData.name = "بیم";
+      musicData.artist = "یاس";
+      musicData.cover = "yas.webp";
+      musicData.isPlay = true;
+      music.current?.play();
     });
     navigator.mediaSession.setActionHandler("nexttrack", () => {
       musicData.sound = "Yas - Zende Bad Iran.mp3";
+      musicData.name = "زنده باد ایران";
+      musicData.artist = "یاس";
+      musicData.cover = "peshro.jpg";
+      musicData.isPlay = true;
+      music.current?.play();
     });
   }
 
